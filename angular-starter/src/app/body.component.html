@@ -1,0 +1,38 @@
+demo
+
+{{title}}
+
+<ul>
+<li *ngFor=" let c of courses">
+    {{c}}
+
+    </li>
+
+
+</ul>
+
+ <img [src]="imageurl" />
+  <img bind-src="imageurl" />
+
+  <button class = "btn btn-danger"> submit </button>
+
+  <button class = "btn btn-danger" [class.active]="isActive" (click)="afterclick($event)"> submit </button>
+
+  <button class = "btn btn-danger" [style.backgroundColor]="isActive ? 'blue' : 'yellow' "> submit </button>
+
+  <input type="text" [value]="title"  (input)="title=$event.target.value"/>
+
+  <input type="text" [(ngModel)]="title"/>
+
+  Preview : {{title}}
+
+
+<br>
+
+<i
+ class = "glyphicon"
+ [class.glyphicon-star-empty]="!isFavorite"
+ [class.glyphicon-star]="isFavorite"
+ (click)="onClick()" >
+
+</i>
